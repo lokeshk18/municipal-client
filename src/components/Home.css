@@ -1,0 +1,155 @@
+/* .body{
+    
+    background-image:url("https://images.unsplash.com/photo-1620136909038-f9ceab618ad1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1884&q=80");
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+.main{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+.body{
+    position: relative;
+}
+.img1{
+    width: 100%;
+    opacity: 0.35;
+    position: absolute;
+    height: 100vh;
+}
+.p1{
+    margin-top: 30px;
+}
+
+.about{
+    padding-top: 60px;
+    text-align: center;
+    padding-bottom: 132px;   
+    position:relative;
+    
+}
+
+.about>p{
+    font-weight:400;
+    font-size:17px;
+}
+
+.btn1{
+    border-color: #ccc;
+    border-radius: 8px;
+    transition-duration:0.4s;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+.btn1:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 1px 5px 0 rgba(0,0,0,0.19);
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.img2{
+    margin-top: 40px;
+    margin-left: 40px;
+    width: 55%;
+}
+
+.img3{
+    width: 60%;
+    
+}
+
+.img4{
+    width: 55%;
+    margin-top: 20px;
+    margin-left: 50px;
+    height: auto;
+}
+
+@media only screen and (max-width:768px) {
+    .img2{
+        margin: 20px;
+        margin-top: 40px;
+        width: 100%;
+    }
+    .img3{
+        
+        margin-top: 40px;
+        width: 100%;
+    }
+    .img4{
+        margin: 20px;
+        margin-top: 40px;
+        width: 100%;
+    }
+}
+
+.row1{
+    
+    margin-bottom: 30px;
+    margin-top: 130px;
+}
+
+.divcol1{
+    padding: 20px;
+}
+
+.divcol2{
+    margin-top: 50px;
+}
+
+.hr1{
+    border: 0;
+    height: 2px;
+    background: rgb(15, 15, 15);
+    background-image: linear-gradient(to right, #ccc, #333, #ccc);
+}
+
+.btn2{
+    border-color: #ccc;
+    border-radius: 8px;
+    transition-duration:0.4s;
+    margin-top: 10px;
+    /* background-color: #81c973; */
+    background-color: #ec6363;
+    color: white;
+    padding: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.btn2:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 1px 5px 0 rgba(0,0,0,0.19);
+    background-color: #ec6363;
+    color: white;
+}
+
+.row2{
+    background-color: rgb(243, 237, 237);
+    margin-bottom: 30px;
+    margin-top: 90px;
+}
+
+.row3{
+    
+    margin-bottom: 60px;
+    margin-top: 90px;
+}
+
+.l1{
+    text-decoration: none;
+    color:whitesmoke;
+    
+}
+.l1:hover{
+    color: whitesmoke;
+}
+.create{
+    text-decoration: none;
+    color: whitesmoke;
+}
+.create:hover{
+    color: whitesmoke;
+}
