@@ -1,6 +1,6 @@
 import React from "react";
 import './Login.css';
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import axios from 'axios';
 import { useState } from "react";
 import Nave from "./Navbar";
@@ -24,7 +24,7 @@ function Login() {
                     localStorage.setItem("password", res.data.password)
                     console.log(res)
                     alert("Login successful..!!")
-                    window.location.replace("/home");
+                    Navigate("/home")
                 }
                 )
 
