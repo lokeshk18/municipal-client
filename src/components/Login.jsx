@@ -21,7 +21,7 @@ function Login() {
                 .post("https://municipalcfs.herokuapp.com/login", inputs)
                 .then(res => {
                     localStorage.setItem("email", res.data.email)
-                    localStorage.setItem("password", res.data.password)
+                    // localStorage.setItem("password", res.data.password)
                     console.log(res)
                     alert("Login successful..!!")
                     // window.location.replace("/home")
