@@ -45,13 +45,13 @@ export default function Viewcomp() {
           setComp((comp)=(res.data))
           console.log(comp.address)
       })
-      // axios.get(`https://api.mapbox.com/geocoding/v5/mapbox.places/${comp.address}.json?access_token=pk.eyJ1IjoibG9rZXNoazE4IiwiYSI6ImNsYTJtczR4ZDBlaGozeG8zaDkxZGdmcWcifQ.f9fL_LWYzwdRl_sM_zZE9w`)
-      // .then(res=>{
-      //     console.log(res.data)
-      //     setLng(res.data.features[0].geometry.coordinates[0])
-      //     setLat(res.data.features[0].geometry.coordinates[1])
-      // }
-      // )
+      axios.get(`https://api.mapbox.com/geocoding/v5/mapbox.places/${comp.address}.json?access_token=pk.eyJ1IjoibG9rZXNoazE4IiwiYSI6ImNsYTJtczR4ZDBlaGozeG8zaDkxZGdmcWcifQ.f9fL_LWYzwdRl_sM_zZE9w`)
+      .then(res=>{
+          console.log(res.data)
+          setLng(res.data.features[0].geometry.coordinates[0])
+          setLat(res.data.features[0].geometry.coordinates[1])
+      }
+      )
     },[]
     );
 
@@ -130,7 +130,7 @@ export default function Viewcomp() {
         <div id='map' style={{marginBottom:"40px"}}> <iframe title='map' width="620" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" id="gmap_canvas" src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=%20KonguEngineeringCollege+()&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe> <script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=980b46dd245105b23e6e5b748bed3ed884a3ede9'></script></div>
       </div> */}
 
-    {/* <Map
+    <Map
         mapboxAccessToken="pk.eyJ1IjoibG9rZXNoazE4IiwiYSI6ImNsYTJtczR4ZDBlaGozeG8zaDkxZGdmcWcifQ.f9fL_LWYzwdRl_sM_zZE9w"
         style={{
           width: "99vw",
@@ -151,7 +151,7 @@ export default function Viewcomp() {
         <Marker longitude={lng} latitude={lat} anchor="bottom">
           <img src={locationimg} height="20px" width="20px " />
         </Marker>
-      </Map>  */}
+      </Map> 
 
 
       </div>

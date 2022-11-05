@@ -24,7 +24,7 @@ function Login() {
                     localStorage.setItem("password", res.data.password)
                     console.log(res)
                     alert("Login successful..!!")
-                    Navigate("/home")
+                    // window.location.replace("/home")
                 }
                 )
 
