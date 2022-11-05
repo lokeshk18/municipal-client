@@ -18,7 +18,7 @@ function Login() {
         };
         try {
             const res = await axios
-                .post("https://municipalcfs.herokuapp.com/login", inputs)
+                .post("https://municipalcfs.herokuapp.com/login",inputs)
                 .then(res => {
                     localStorage.setItem("email", res.data.email)
                     // localStorage.setItem("password", res.data.password)
