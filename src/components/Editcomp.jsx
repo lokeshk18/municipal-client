@@ -17,22 +17,31 @@ function Editcomp(){
     var [comp , setComp] = useState({});
     const location = useLocation();
     const { id } = location.state;
-    const geturl = "https://municipalcfs.herokuapp.com/"+id;
-    const posturl = "https://municipalcfs.herokuapp.com/"+id;
+    const geturl = "https://municipalcfs.herokuapp.com/viewcomp/"+id;
+    console.log(geturl)
+    // const geturl = "https://localhost:/"+id;
+    const posturl = "https://municipalcfs.herokuapp.com/editcomp"+id;
 
-    useEffect(()=>{
-        axios
+    async function ini(){
+        console.log(geturl)
+        try{
+        await axios
           .get(geturl)
           .then(res => {
               setComp((comp)=(res.data))
-
               setName((name)=(res.data.name))
               setDescription((description)=(res.data.description))
               setAddress((address)=(res.data.address))
               setMunicipality((municipality)=(res.data.municipality))
               setDistrict((district)=(res.data.district))
-              
           })
+        }
+        catch(e){
+            console.log(e)
+        }
+    }
+    useEffect(()=>{
+        ini()
         },[]
         );
         const eleid = comp._id

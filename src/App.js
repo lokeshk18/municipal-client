@@ -23,7 +23,7 @@ function App() {
         <Route path="/viewcomp" element={<Viewcomp/>}/>
         <Route path="/editcomp" element={<Editcomp/>}/>
         <Route path="/admin" element={<Admin/>}/>
-        <Route path="/map" element={<CustomMap/>}/>
+        {/* <Route path="/map" element={<CustomMap/>}/> */}
     </Routes>
     </>
   );

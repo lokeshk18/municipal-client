@@ -1,18 +1,15 @@
 import { Link, Navigate } from "react-router-dom";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate} from "react-router-dom";
 
 function Nave() {
 
   const getEmail = localStorage.getItem("email")
   const getPassword = localStorage.getItem("password")
   const isAdmin = localStorage.getItem("isAdmin");
-  // const navigate = Navigate()
+  const navigate = useNavigate()
   async function logout() {
-    localStorage.clear()
-    // navigate("/newcomp")
-    window.location.reload("/home")
+    localStorage.clear();
   }
-
 
   return (
     <>
@@ -58,7 +55,7 @@ function Nave() {
                       null
                     )
                     }
-                    <Link className="nav-link link2" onClick={logout} to="/Home" style={{ marginLeft: "10px" }}><i class="fa-sharp fa-solid fa-right-to-bracket" style={{ marginRight: "4px" }}></i> Logout</Link>
+                    <Link className="nav-link link2" onClick={logout} to="/login" style={{ marginLeft: "10px" }}><i class="fa-sharp fa-solid fa-right-to-bracket" style={{ marginRight: "4px" }}></i> Logout</Link>
 
                   </div>
 

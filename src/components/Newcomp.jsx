@@ -39,7 +39,6 @@ function Newcomp() {
 
     }
 
-
     async function post(e) {
         e.preventDefault()
         const inputs = {
@@ -51,9 +50,10 @@ function Newcomp() {
             imageurl
         };
         try {
-            
-            navigate("/complaints")
             await axios.post("https://municipalcfs.herokuapp.com/post", inputs)
+            .then(
+                navigate("/complaints")
+            )
         }
         catch {
             console.log(Error);

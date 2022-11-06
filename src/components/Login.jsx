@@ -1,6 +1,6 @@
 import React from "react";
 import './Login.css';
-import { Link, Navigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from 'axios';
 import { useState } from "react";
 import Nave from "./Navbar";
@@ -9,13 +9,15 @@ function Login() {
 
     const [email, setEmail] = useState({ email: "" })
     const [password, setPassword] = useState({ password: "" })
-
+    const navigate = useNavigate();
+    
     async function post(e) {
         e.preventDefault()
         const inputs = {
             email,
             password
         };
+
         try {
             await axios
                 .post("https://municipalcfs.herokuapp.com/login",inputs)
@@ -23,11 +25,10 @@ function Login() {
                     localStorage.setItem("email", res.data.email)
                     // localStorage.setItem("password", res.data.password)
                     console.log(res)
-                    alert("Login successful..!!")
-                    // window.location.replace("/home")
+                    alert("Login successful..!!");
+                    navigate("/home")
                 }
                 )
-
         }
         catch (err) {
             console.log(Error);
@@ -60,7 +61,7 @@ function Login() {
                                             Looks good!
                                         </div>
                                     </div>
-                                    <button type="submit" className="btn btn-success w-100">Login</button>
+                                    <button type="submit" className="btn btn-success  w-100">Login </button>
                                 </form>
                             </div>
                         </div>
