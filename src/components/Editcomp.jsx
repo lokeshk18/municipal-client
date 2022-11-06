@@ -40,6 +40,7 @@ function Editcomp(){
             console.log(e)
         }
     }
+
     useEffect(()=>{
         ini()
         },[]

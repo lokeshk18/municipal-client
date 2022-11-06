@@ -52,7 +52,7 @@ function Newcomp() {
         try {
             await axios.post("https://municipalcfs.herokuapp.com/post", inputs)
             .then(
-                navigate("/complaints")
+                    navigate("/complaints")
             )
         }
         catch {
@@ -61,6 +61,7 @@ function Newcomp() {
 
     }
 
+    
     return (
         <div>
             <Nav />

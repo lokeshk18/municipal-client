@@ -60,6 +60,7 @@ export default function Viewcomp() {
     async function post(){
       navigate("/complaints");
       axios.post(posturl);
+      window.location.reload(true);
     }
 
   return (
